@@ -99,4 +99,6 @@ It should **not** be used for navigation, safety, or real-world decision-making.
 ```bash
 pip install streamlit numpy pandas scikit-learn folium streamlit-folium joblib
 streamlit run app.py
-
+```
+## Try it
+https://istanbul-traffic-ai-kcodeio.streamlit.app/
