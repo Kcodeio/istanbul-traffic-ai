@@ -90,6 +90,7 @@ It should **not** be used for navigation, safety, or real-world decision-making.
 ## Images
 
 <img width="1919" height="875" alt="resim" src="https://github.com/user-attachments/assets/9827dcfe-47e7-463d-9e8f-76b460173b95" />
+<img width="1919" height="872" alt="resim" src="https://github.com/user-attachments/assets/c8e2fba8-f503-4f25-82b7-37699c85fec7" />
 
 
 ## ▶️ Running the App
