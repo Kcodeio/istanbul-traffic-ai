@@ -1,47 +1,66 @@
 # Istanbul Traffic AI 🚦🗺️
 
-An experimental traffic risk prediction and decision-support application for Istanbul.
+An experimental **traffic risk prediction** and **decision-support** application for Istanbul.
 
-This project estimates **traffic congestion risk** for a selected district, day, and hour, and provides a simple decision:
+This project estimates **traffic congestion risk** for a selected **district**, **day**, and **hour**, and provides a simple, human-readable decision:
 
 > **Is it a good idea to go out?**
 
-The focus of the project is to demonstrate a **complete ML workflow** combined with a practical UI and a lightweight decision engine.
+The main goal is to demonstrate a **complete end-to-end ML workflow** combined with a practical UI and a lightweight decision engine — not to provide real-world traffic guidance.
+
+🚀 **Live Demo:**  
+https://istanbul-traffic-ai-kcodeio.streamlit.app/
 
 ---
 
 ## 🚀 Features
 
-- 🚦 **Traffic Risk Prediction**
-  - Predicts congestion risk as a percentage
-  - Based on district, day of week, and hour
-  - Uses a trained RandomForest model
+### 🚦 Traffic Risk Prediction
+- Predicts traffic congestion risk as a **percentage**
+- Based on:
+  - District
+  - Day of week
+  - Hour of day
+- Uses a trained **RandomForest** model
 
-- 🧠 **Decision Engine**
-  - Converts the predicted risk into a clear **YES / NO** recommendation
-  - Explains the reasoning in plain English
+---
 
-- 🗺️ **Traffic Map (Visual Aid)**
-  - Displays predicted traffic risk for **all districts**
-  - Color-coded markers:
-    - 🟢 Low traffic
-    - 🟡 Moderate traffic
-    - 🔴 High traffic
-  - The map is an **additional visualization**, not the main decision source
+### 🧠 Decision Engine
+- Converts numeric risk into a clear **YES / NO** recommendation
+- Explains *why* the decision was made in plain English
+- Keeps the logic transparent and interpretable
 
-- 📊 **Synthetic Dataset**
-  - Automatically generated (≈180k+ rows)
-  - Encodes realistic assumptions:
-    - Rush hours
-    - Weekdays vs weekends
-    - Late-night traffic
-    - District-specific profiles (core, residential, highways)
+---
 
-- ⚙️ **Self-Contained Training**
-  - If the dataset or model does not exist:
-    - Data is generated automatically
-    - The model is trained automatically
-  - No manual preprocessing required
+### 🗺️ Traffic Map (Visual Aid)
+- Displays predicted traffic risk for **all districts**
+- Color-coded markers:
+  - 🟢 Low traffic
+  - 🟡 Moderate traffic
+  - 🔴 High traffic
+- The map is an **auxiliary visualization**, not the main decision source
+
+---
+
+### 📊 Synthetic Dataset
+- Automatically generated (~**180,000+ rows**)
+- Encodes realistic assumptions:
+  - Morning & evening rush hours
+  - Weekdays vs weekends
+  - Late-night traffic drops
+  - District-specific profiles:
+    - Central business areas
+    - Residential zones
+    - Highway-heavy districts
+
+---
+
+### ⚙️ Self-Contained Training
+- If the dataset or model does not exist:
+  - The dataset is generated automatically
+  - The model is trained automatically
+- No manual preprocessing required
+- Fully reproducible pipeline
 
 ---
 
@@ -61,16 +80,16 @@ The focus of the project is to demonstrate a **complete ML workflow** combined w
 
 ## ⚠️ Disclaimer
 
-**This project does NOT use real-time traffic data.**
+**This project does NOT use real-time or official traffic data.**
 
 - All data is **synthetic**
 - Predictions are **not authoritative**
-- The project is intended for:
+- The project is intended strictly for:
   - Learning
   - Experimentation
   - Demonstration of ML + UI integration
 
-It should **not** be used for navigation, safety, or real-world decision-making.
+🚫 **Do NOT use this project for navigation, safety, or real-world decision-making.**
 
 ---
 
@@ -87,18 +106,22 @@ It should **not** be used for navigation, safety, or real-world decision-making.
 
 ---
 
-## Images
+## 🖼️ Screenshots
 
-<img width="1919" height="875" alt="resim" src="https://github.com/user-attachments/assets/9827dcfe-47e7-463d-9e8f-76b460173b95" />
-<img width="1919" height="872" alt="resim" src="https://github.com/user-attachments/assets/c8e2fba8-f503-4f25-82b7-37699c85fec7" />
+<img width="1919" height="875" alt="Traffic prediction UI" src="https://github.com/user-attachments/assets/9827dcfe-47e7-463d-9e8f-76b460173b95" />
 
-![2026-01-31-12-17-52](https://github.com/user-attachments/assets/2fd1ab54-8be4-4283-8865-feac557ae30f)
+<img width="1919" height="872" alt="Traffic map visualization" src="https://github.com/user-attachments/assets/c8e2fba8-f503-4f25-82b7-37699c85fec7" />
 
-## ▶️ Running the App
+![Live demo interaction](https://github.com/user-attachments/assets/2fd1ab54-8be4-4283-8865-feac557ae30f)
+
+---
+## ⭐ Support
+
+If you find this project interesting or useful, consider giving it a star ⭐
+It helps visibility and motivates further improvements.
+
+## ▶️ Running the App Locally
 
 ```bash
 pip install streamlit numpy pandas scikit-learn folium streamlit-folium joblib
 streamlit run app.py
-```
-## Try it
-https://istanbul-traffic-ai-kcodeio.streamlit.app/
