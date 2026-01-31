@@ -87,8 +87,14 @@ It should **not** be used for navigation, safety, or real-world decision-making.
 
 ---
 
+## Images
+
+<img width="1919" height="875" alt="resim" src="https://github.com/user-attachments/assets/9827dcfe-47e7-463d-9e8f-76b460173b95" />
+
+
 ## ▶️ Running the App
 
 ```bash
 pip install streamlit numpy pandas scikit-learn folium streamlit-folium joblib
 streamlit run app.py
+
